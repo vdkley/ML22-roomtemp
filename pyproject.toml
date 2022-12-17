@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "deep_learning"
+name = "ML22-roomtemp"
 version = "0.1.0"
 description = ""
-authors = ["Raoul Grouls <raoul.grouls@businessdecision.nl>"]
+authors = ["Pascal van der Kley <pascal@vdkley.nl>"]
 
 [tool.poetry.dependencies]
 python = "3.9.12"
