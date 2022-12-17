@@ -25,8 +25,8 @@ def train(config: Dict, checkpoint_dir=None):
     # access the datadir
     data_dir = config["data_dir"]
     with FileLock(data_dir / ".lock"):
-        trainloader, testloader = make_dataset.get_gestures(
-            data_dir=data_dir, split=0.8, batchsize=32
+        trainloader, testloader = make_dataset.get_roomtemp(
+            data_dir=data_dir, split=5000
         )
 
     # we set up the metric
@@ -67,7 +67,7 @@ if __name__ == "__main__":
         input_size=3,
         output_size=20,
         tune_dir=Path("models/ray").resolve(),
-        data_dir=Path("data/external/gestures-dataset").resolve(),
+        data_dir=Path("data/raw/roomtemp").resolve(),
     )
 
     reporter = CLIReporter()
